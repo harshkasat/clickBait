@@ -53,6 +53,22 @@ Many YouTube users find themselves easily distracted by irrelevant videos or the
 4. Click "Load unpacked".
 5. Select the `clickBait` directory you cloned.
 
+### Installing from ZIP file
+
+1. Download the ZIP file from Github Repo, to use extension
+2. Extract the ZIP file to a local directory
+3. Open Chrome and navigate to `chrome://extensions/`
+4. Enable "Developer mode" using the toggle in the top right corner
+5. Click "Load unpacked" button in the top left
+6. Navigate to the extracted extension directory and select it
+7. The extension should now appear in your extensions list
+8. Pin the extension to your toolbar by clicking the puzzle piece icon and clicking the pin icon
+
+Note: If you update the ZIP file, you'll need to:
+1. Return to `chrome://extensions/`
+2. Find the extension and click the refresh icon, or
+3. Remove and re-add the extension with the new files
+
 
 ## Configuration
 
