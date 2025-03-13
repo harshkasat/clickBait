@@ -3,7 +3,6 @@
 A browser extension to enhance your YouTube experience by minimizing distractions and improving focus.
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/harshkasat/clickBait/actions/workflows/main.yml/badge.svg)](https://github.com/harshkasat/clickBait/actions/workflows/main.yml)
 
 
 ## Project Overview
@@ -75,32 +74,6 @@ These settings can be modified through the extension's popup UI (not fully imple
 
 The core logic resides within `content.js`.  The `processPage()` function is the main entry point, handling the blurring and hiding of content.
 
-**Example: Hiding Shorts:**
-
-The `removeShorts()` function uses CSS selectors to find and hide Shorts elements:
-
-```javascript
-function removeShorts() {
-  const shortElements = document.querySelectorAll('ytd-reel-item-renderer');
-  shortElements.forEach(shortElement => { shortElement.style.display = 'none'; });
-  // ... (other code to remove Shorts shelves and containers)
-}
-```
-
-**Example: Blurring Videos:**
-
-The `processVideoElements()` function uses a TF-IDF algorithm (partially implemented in `computeTFIDF()`) to determine the similarity between video titles and user-provided keywords. Videos below a similarity threshold are blurred using the `ytd-blur` class.
-
-```javascript
-function processVideoElements() {
-  // ... (code to fetch video titles and user keywords) ...
-
-  videoElements.forEach((video, index) => {
-    const similarityScore = similarities[index]?.similarity || 0;
-    // ... (logic to blur or unblur based on similarity score or whitelist) ...
-  });
-}
-```
 
 The `computeTFIDF` function calculates the TF-IDF vectors for video titles and user input to determine similarity scores.  This function is complex and involves natural language processing techniques.
 
@@ -120,4 +93,4 @@ The extension uses a `MutationObserver` to detect changes in the YouTube page's 
 Contributions are welcome! Please open an issue to discuss proposed changes before submitting a pull request.  Follow standard JavaScript coding practices and ensure all new code is well-tested.
 
 
-**(Note:  The provided code is incomplete.  Several functions are partially implemented, and the popup UI is not fully functional.)**
+**(Note:  The provided code is partially complete.  Several functions are partially implemented, and the popup UI is not fully functional.)**
